@@ -5,3 +5,31 @@
 html {
   scroll-behavior: smooth;
 }
+
+input {
+  padding:1px;
+  margin:8px 0; 
+  /* // add top and bottom margin */
+  /* box-shadow: 0 0 15px 4px rgba(0,0,0,0.06); */
+  border:0;
+  border-bottom: 1px solid black;
+  background-color: bisque;
+
+}
+
+button {
+  padding: 5px 10px 5px 10px;
+}
+
+body {
+  background-color: bisque;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cards img {
+  width: 100%;
+}
