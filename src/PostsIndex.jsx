@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 // moved index of posts into its own file
 export function PostsIndex(props) {
   console.log(props);
@@ -12,6 +13,7 @@ export function PostsIndex(props) {
             <h2>{post.title}</h2>
             <p>Body: {post.body} </p>
             <img src={post.image_url} alt="blog post pics" />
+            <button onClick={props.onShowPost}>More Info!</button>
           </div>
         ))}
       </div>
