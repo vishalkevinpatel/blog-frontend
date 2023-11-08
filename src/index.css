@@ -65,3 +65,7 @@ button.react:hover {
   transition: filter 300ms;
 } */
 
+.tinyImage {
+  width: 75%;
+  height: auto;
+}
