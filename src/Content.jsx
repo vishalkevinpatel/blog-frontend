@@ -9,7 +9,10 @@ export function Content() {
   // import and call modal
   // giving react the variable and the ability to set that variable
   const [isPostsShowVisible, setIsPostsShowVisible] = useState(false);
+
   const [posts, setPosts] = useState([]);
+  //creates react variable that can be set
+  const [currentPost, setCurrentPost] = useState({});
 
   //function to make web requests to index data
   const handleIndexPosts = () => {
@@ -18,9 +21,11 @@ export function Content() {
       setPosts(response.data);
     });
   };
+
   //a function to toggle modal show on
-  const handleShowPost = () => {
+  const handleShowPost = (post) => {
     setIsPostsShowVisible(true);
+    setCurrentPost(post);
   };
 
   const handleClose = () => {
@@ -34,7 +39,7 @@ export function Content() {
       <PostsNew />
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
-        <p>Test</p>
+        <p>Title: {currentPost.title}</p>
       </Modal>
     </div>
   );

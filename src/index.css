@@ -28,7 +28,7 @@ input {
 
 }
 
-button {
+/* button {
   padding: 5px 10px 5px 10px;
 }
 
@@ -38,7 +38,7 @@ button:hover {
 
 button.react:hover {
   filter: drop-shadow(0 0 1em black);
-}
+} */
 
 .cards {
   display: grid;
@@ -65,37 +65,3 @@ button.react:hover {
   transition: filter 300ms;
 } */
 
-.star {
-  background-color: black;
-  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-  display: inline-block;
-  height: 50px;
-  width: 50px;
-}
-
-.star1{
-  transform: rotate(30deg)
-}
-
-.star2{
-  transform: rotate(60deg)
-}
-
-.star3{
-  transform: rotate(90deg)
-}
-
-@keyframes roll{
-  from{
-    transform: rotate(0deg)
-  }
-  to{
-    transform: rotate(360deg)
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .star {
-    animation: logo-spin infinite 20s linear;
-  }
-} 
