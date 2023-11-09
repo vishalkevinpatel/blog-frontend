@@ -2,19 +2,21 @@
 export function PostsNew() {
   return (
     <div id="posts-new">
-      <h1>New post</h1>
+      <h1 className="d-flex justify-content-center">New post</h1>
       <form>
-        <div>
+        <div className="d-flex justify-content-center">
           Title: <input type="text" placeholder="  new blog post title" />
         </div>
-        <div>
+        <div className="d-flex justify-content-center">
           Body: <input type="text" placeholder="       new blog post" />
         </div>
-        <div>
+        <div className="d-flex justify-content-center">
           Image: <input type="text" placeholder="          image url" />
         </div>
         <p></p>
-        <button type="submit">Post your blog post</button>
+        <div className="d-flex justify-content-center">
+          <button type="submit">Post your blog post</button>
+        </div>
       </form>
     </div>
   );
