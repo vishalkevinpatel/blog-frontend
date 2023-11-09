@@ -14,14 +14,14 @@ function CustomLogo() {
 
 function App() {
   return (
-    <div>
-      <body>
+    <body>
+      <div>
         <Header />
         <CustomLogo />
         <Content />
         <Footer />
-      </body>
-    </div>
+      </div>
+    </body>
   );
 }
 

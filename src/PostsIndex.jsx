@@ -5,29 +5,38 @@ export function PostsIndex(props) {
 
   return (
     <div id="posts-index" className="container">
-      <h1 className="d-flex justify-content-center">All posts</h1>
       {/* loop of defined recipe data props from the parent component */}
       <p></p>
       <div className="container">
-        <div className="card text-black">
-          {props.posts.map((post) => (
-            <div key={post.id}>
-              <div className="text-center">
-                <h2 className="card-title">{post.title}</h2>
-              </div>
-              <div className="d-flex justify-content-center">
-                <div className="w-50 d-flex">
-                  <p className="card-body text-center">{post.body} </p>
+        <div className="p-5">
+          <div className="row row-cols-1 row-cols-md-2 g-4">
+            {props.posts.map((post) => (
+              <div className="col" key={post.id}>
+                <div className="card-deck text-white bg-dark justify-content-center" style={{ height: "50rem" }}>
+                  <div className="text-center">
+                    <h2 className="p-3">{post.title}</h2>
+                  </div>
+                  <div className="p-3 w-90 d-flex">
+                    <p className="card-body text-center">{post.body} </p>
+                  </div>
+                  <div className="d-flex justify-content-center">
+                    <img src={post.image} className="w-75 p-3" alt="blog post pics" />
+                  </div>
+                  <div className="text-center">
+                    <button
+                      type="button"
+                      className="btn btn-dark"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      onClick={() => props.onShowPost(post)}
+                    >
+                      More Info!
+                    </button>
+                  </div>
                 </div>
               </div>
-              <div className="d-flex justify-content-center">
-                <img src={post.image} className="img-thumbnail" alt="blog post pics" />
-              </div>
-              <div className="text-center">
-                <button onClick={() => props.onShowPost(post)}>More Info!</button>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
