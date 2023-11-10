@@ -1,14 +1,14 @@
 // creating new posts moved into own file
-import axios from "axios";
+// import axios from "axios";
 
-export function PostsNew() {
+export function PostsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("handle submit");
     const params = new FormData(event.target);
-    axios.post("http://localhost/3000/posts.json", params).then((response) => {
-      console.log(response.data);
-    });
+    //this comes from content.jsx by way of the handlecreate post
+    props.onCreatePost(params);
+    event.target.reset();
   };
 
   return (
