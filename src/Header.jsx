@@ -28,42 +28,23 @@ export function Header() {
                 <Link to="/" className="nav-link active" aria-current="page">
                   Home
                 </Link>
+                <Link to="/login" className="dropdown-item">
+                  Login
+                </Link>
+                <Link to="/postsnew" className="dropdown-item">
+                  New Post
+                </Link>
+                <Link to="/postsindex" className="dropdown-item">
+                  All Posts
+                </Link>
+                <Link to="/signup" className="dropdown-item">
+                  Signup
+                </Link>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Dropdown
+              <li>
+                <a className="dropdown-item" href="#footers">
+                  Straight to the BOTTOM
                 </a>
-                <ul className="dropdown-menu">
-                  <li>
-                    <Link to="/" className="nav-link active" aria-current="page">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#posts-new">
-                      New Post
-                    </a>
-                  </li>
-                  <li>
-                    <Link to="/signup" className="dropdown-item">
-                      Signup
-                    </Link>
-                  </li>
-                  <li>
-                    <hr className="dropdown-divider" />
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#footers">
-                      Straight to the BOTTOM
-                    </a>
-                  </li>
-                </ul>
               </li>
             </ul>
             <form className="d-flex" role="search">
