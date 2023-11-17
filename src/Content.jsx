@@ -8,6 +8,7 @@ import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
+import { Routes, Route } from "react-router-dom";
 
 export function Content() {
   // import and call modal
@@ -70,7 +71,9 @@ export function Content() {
 
   return (
     <div className="container">
-      <Signup />
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
       <Login />
       <LogoutLink />
       <PostsNew onCreatePost={handleCreatePost} />

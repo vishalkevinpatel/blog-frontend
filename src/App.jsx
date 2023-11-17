@@ -5,21 +5,23 @@
 import { Content } from "./Content";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { BrowserRouter } from "react-router-dom";
 
-function CustomLogo() {
-  return (
-    <div className="star">{/* <img className="logo" src="https://www.svgrepo.com/show/220702/star-vip.svg" /> */}</div>
-  );
-}
+// function CustomLogo() {
+//   return (
+//     <div className="star">{/* <img className="logo" src="https://www.svgrepo.com/show/220702/star-vip.svg" /> */}</div>
+//   );
+// }
 
 function App() {
   return (
     <body>
       <div>
-        <Header />
-        <CustomLogo />
-        <Content />
-        <Footer />
+        <BrowserRouter>
+          <Header />
+          <Content />
+          <Footer />
+        </BrowserRouter>
       </div>
     </body>
   );

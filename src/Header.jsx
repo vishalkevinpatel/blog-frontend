@@ -1,4 +1,7 @@
 // moving header into its own file
+
+import { Link } from "react-router-dom";
+
 export function Header() {
   return (
     <header>
@@ -6,7 +9,7 @@ export function Header() {
       <nav className="navbar navbar-expand-lg bg-light">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
-            Navbar
+            the blog about nothing
           </a>
           <button
             className="navbar-toggler"
@@ -22,14 +25,9 @@ export function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <Link to="/" className="nav-link active" aria-current="page">
                   Home
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#posts-new">
-                  Link
-                </a>
+                </Link>
               </li>
               <li className="nav-item dropdown">
                 <a
@@ -43,14 +41,19 @@ export function Header() {
                 </a>
                 <ul className="dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#posts-index">
-                      All Posts
-                    </a>
+                    <Link to="/" className="nav-link active" aria-current="page">
+                      Home
+                    </Link>
                   </li>
                   <li>
                     <a className="dropdown-item" href="#posts-new">
                       New Post
                     </a>
+                  </li>
+                  <li>
+                    <Link to="/signup" className="dropdown-item">
+                      Signup
+                    </Link>
                   </li>
                   <li>
                     <hr className="dropdown-divider" />
