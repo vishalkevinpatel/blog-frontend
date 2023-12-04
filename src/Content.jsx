@@ -7,7 +7,7 @@ import { PostsShow } from "./PostsShow";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
-import { LogoutLink } from "./LogoutLink";
+// import { LogoutLink } from "./LogoutLink";
 import { Routes, Route } from "react-router-dom";
 import { PostsShowPage } from "./PostsShowPage";
 
