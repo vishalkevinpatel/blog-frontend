@@ -1,8 +1,33 @@
 // moving header into its own file
 
 import { Link } from "react-router-dom";
+import { LogoutLink } from "./LogoutLink";
 
 export function Header() {
+  let authenticationLinks;
+  if (localStorage.jwt === undefined) {
+    authenticationLinks = (
+      <>
+        <li className="nav-item">
+          <Link to="/signup" className="dropdown-item">
+            Signup
+          </Link>
+          <Link to="/login" className="dropdown-item">
+            Login
+          </Link>
+        </li>
+      </>
+    );
+  } else {
+    authenticationLinks = (
+      <>
+        <li className="nav-item">
+          <LogoutLink />
+        </li>
+      </>
+    );
+  }
+
   return (
     <header>
       {/* header new borrowed from bootstrap */}
@@ -28,19 +53,15 @@ export function Header() {
                 <Link to="/" className="nav-link active" aria-current="page">
                   Home
                 </Link>
-                <Link to="/login" className="dropdown-item">
-                  Login
-                </Link>
+                {/* logging in links */}
                 <Link to="/postsnew" className="dropdown-item">
                   New Post
                 </Link>
                 <Link to="/postsindex" className="dropdown-item">
                   All Posts
                 </Link>
-                <Link to="/signup" className="dropdown-item">
-                  Signup
-                </Link>
               </li>
+              {authenticationLinks}
               <li>
                 <a className="dropdown-item" href="#footers">
                   Straight to the BOTTOM

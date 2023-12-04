@@ -84,9 +84,9 @@ export function Content() {
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost} />
       </Modal>
-      <div className="d-flex justify-content-center">
+      {/* <div className="d-flex justify-content-center">
         <LogoutLink />
-      </div>
+      </div> */}
     </div>
   );
 }
