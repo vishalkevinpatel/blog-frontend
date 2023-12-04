@@ -74,3 +74,7 @@ button.react:hover {
   height: 50px;x;
   object-fit:contain;
 } */
+
+#signup img {
+  width: 400px;
+}

@@ -9,6 +9,7 @@ import { Signup } from "./Signup";
 import { Login } from "./Login";
 import { LogoutLink } from "./LogoutLink";
 import { Routes, Route } from "react-router-dom";
+import { PostsShowPage } from "./PostsShowPage";
 
 export function Content() {
   // import and call modal
@@ -71,18 +72,21 @@ export function Content() {
 
   return (
     <div className="container">
-      <h1>This is on every page</h1>
+      <h1>🤘</h1>
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
         <Route path="/postsnew" element={<PostsNew onCreatePost={handleCreatePost} />} />
         <Route path="/postsindex" element={<PostsIndex posts={posts} onShowPost={handleShowPost} />} />
+        <Route path="/posts/:id" element={<PostsShowPage />} />
       </Routes>
 
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost} />
       </Modal>
-      <LogoutLink />
+      <div className="d-flex justify-content-center">
+        <LogoutLink />
+      </div>
     </div>
   );
 }
