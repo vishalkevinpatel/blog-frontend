@@ -7,7 +7,7 @@ export function PostsShowPage() {
   const params = useParams;
 
   const handleShowPost = () => {
-    axios.get(`http://localhost:3000/posts/${params.id}.json`).then((response) => {
+    axios.get(`https://blog-zspf.onrender.com/posts/${params.id}.json`).then((response) => {
       setPost(response.data);
     });
   };

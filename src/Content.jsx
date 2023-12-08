@@ -22,7 +22,7 @@ export function Content() {
 
   //function to make web requests to index data
   const handleIndexPosts = () => {
-    axios.get("http://localhost:3000/posts.json").then((response) => {
+    axios.get("https://blog-zspf.onrender.com/posts.json").then((response) => {
       console.log(response.data);
       setPosts(response.data);
     });
@@ -39,13 +39,13 @@ export function Content() {
   };
 
   const handleCreatePost = (params) => {
-    axios.post("http://localhost:3000/posts.json", params).then((response) => {
+    axios.post("https://blog-zspf.onrender.com/posts.json", params).then((response) => {
       setPosts([...posts, response.data]);
     });
   };
 
   const handleUpdatePost = (id, params) => {
-    axios.patch(`http://localhost:3000/posts/${id}.json`, params).then((response) => {
+    axios.patch(`https://blog-zspf.onrender.com/posts/${id}.json`, params).then((response) => {
       setPosts(
         posts.map((post) => {
           if (post.id === response.data.id) {
@@ -61,7 +61,7 @@ export function Content() {
   };
 
   const handleDestroyPost = (post) => {
-    axios.delete(`http://localhost:3000/posts/${post.id}.json`).then((response) => {
+    axios.delete(`https://blog-zspf.onrender.com/posts/${post.id}.json`).then((response) => {
       setPosts(posts.filter((thispost) => thispost.id !== post.id));
       console.log(response);
       handleClose();
