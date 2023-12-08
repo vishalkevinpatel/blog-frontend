@@ -9,7 +9,21 @@ export function PostsIndex(props) {
 
   return (
     <div id="posts-index" className="container">
-      <input type="text" value={searchFilter} onChange={(event) => setSearchFilter(event.target.value)} />
+      AYO SEARCH HERE: <span></span>
+      <input
+        placeholder="type here"
+        type="text"
+        value={searchFilter}
+        onChange={(event) => setSearchFilter(event.target.value)}
+        list="titles"
+      />
+      <datalist id="titles">
+        {searchFilter.length < 3 ? (
+          <span></span>
+        ) : (
+          props.posts.map((post) => <option key={post.id} value={post.title} />)
+        )}
+      </datalist>
       {/* loop of defined recipe data props from the parent component */}
       <p></p>
       <div className="container">
